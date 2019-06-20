@@ -33,7 +33,7 @@ public class Demo4Service {
         System.out.println("Car speed  is " + car.getSpeed());
         if(car.getSpeed() == (150))throw new CarNotFoundException();
 
-        System.out.println("Car colour is " + car.getModel());
+        System.out.println("Car model is " + car.getModel());
         System.out.println("Car colour is " + car.getColor());
         System.out.println("Car speed  is " + car.getSpeed());
 
