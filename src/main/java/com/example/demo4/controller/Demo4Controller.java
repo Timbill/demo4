@@ -47,5 +47,13 @@ import java.util.List;
 
         }
     }
+
+    @PostMapping(path = "/updateCar", produces = "application/json") public Car updateCar (@RequestBody Car car) {
+        {
+
+            return demo4Service.updateCarInfo(car);
+
+        }
+    }
 }
 
