@@ -23,14 +23,14 @@ import java.util.List;
         return "Hello there from Demo4Controller";
     }
 
-    @GetMapping(path = "/car/{model}", produces = "application/json") public Car getCar (@PathVariable("model") String model) {
+    @GetMapping(path = "/cars/{model}", produces = "application/json") public Car getCar (@PathVariable("model") String model) {
         {
             return demo4Service.getCarInfo(model);
 
         }
     }
 
-    @GetMapping(path = "/car", produces = "application/json") public Iterable <Car> getCars () {
+    @GetMapping(path = "/cars", produces = "application/json") public Iterable <Car> getCars () {
         {
 
             Iterable <Car> cars = demo4Service.getCarsInfo();
@@ -40,7 +40,7 @@ import java.util.List;
         }
     }
 
-    @PostMapping(path = "/setCar", produces = "application/json") public Car setCar (@RequestBody Car car) {
+    @PostMapping(path = "cars", produces = "application/json") public Car setCar (@RequestBody Car car) {
         {
 
             return demo4Service.setCarInfo(car);
@@ -48,7 +48,7 @@ import java.util.List;
         }
     }
 
-    @PostMapping(path = "/updateCar", produces = "application/json") public Car updateCar (@RequestBody Car car) {
+    @PutMapping(path = "/cars", produces = "application/json") public Car updateCar (@RequestBody Car car) {
         {
 
             return demo4Service.updateCarInfo(car);
